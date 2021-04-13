@@ -20,7 +20,8 @@ before_deploy:
   # Deploy
   # Bluemix / IBM Cloud
 deploy:
-  - provider: cloudfoundry
+  - provider: bluemixcloudfoundry
+    username: apikey
     apikey:
       secret: 5l3MxD2nKmP7WxGzu-Vn6D2fVHx2de9lV5fetJkqpzeh
     #username: thomas.cheuk@hk1.ibm.com
