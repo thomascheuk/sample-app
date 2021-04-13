@@ -31,3 +31,5 @@ deploy:
     space: cheuk.sydney
     region: au-syd
     api: https://api.au-syd.cf.cloud.ibm.com
+    on: 
+      all_branches: true
