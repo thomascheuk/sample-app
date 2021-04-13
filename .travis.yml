@@ -21,12 +21,14 @@ before_deploy:
   # Bluemix / IBM Cloud
 deploy:
   - provider: cloudfoundry
-    username: thomas.cheuk@hk1.ibm.com
+    apikey:
+      secret: 5l3MxD2nKmP7WxGzu-Vn6D2fVHx2de9lV5fetJkqpzeh
+    #username: thomas.cheuk@hk1.ibm.com
     #########################
     ## Add BLUEMIX_PASSWORD environment variable to your Travis project's settings
     ## https://docs.travis-ci.com/user/environment-variables/#Defining-Variables-in-Repository-Settings
     #########################
-    password: 5l3MxD2nKmP7WxGzu-Vn6D2fVHx2de9lV5fetJkqpzeh
+    #password: 5l3MxD2nKmP7WxGzu-Vn6D2fVHx2de9lV5fetJkqpzeh
     organization: owenchen@tw.ibm.com
     space: cheuk.sydney
     region: au-syd
