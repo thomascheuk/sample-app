@@ -20,7 +20,8 @@ before_deploy:
   # Deploy
   # Bluemix / IBM Cloud
 deploy:
-  - provider: bluemixcloudfoundry
+  - edge: true
+    provider: bluemixcloudfoundry
     username: apikey
     apikey:
       secret: 5l3MxD2nKmP7WxGzu-Vn6D2fVHx2de9lV5fetJkqpzeh
@@ -32,7 +33,8 @@ deploy:
     #password: 5l3MxD2nKmP7WxGzu-Vn6D2fVHx2de9lV5fetJkqpzeh
     organization: owenchen@tw.ibm.com
     space: cheuk.sydney
-    region: au-syd
-    api: https://api.au-syd.cf.cloud.ibm.com
+    manifest: manifest.yml
+    #region: au-syd
+    #api: https://api.au-syd.cf.cloud.ibm.com
     on: 
       all_branches: true
