@@ -1,0 +1,10 @@
+# manifest.yml
+applications:
+  - name: sample-app
+    memory: 32M
+    instances: 1
+    disk_quota: 32M
+    routes:
+      - route: sample-app.hkgpoc.com
+    docker:
+      image: thomas/sample-app
