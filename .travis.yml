@@ -28,7 +28,7 @@ deploy:
     organization: owenchen@tw.ibm.com
     region: au-syd
     app_name: sample-app
-    api: https://api.au-syd.cf.cloud.ibm.com
+    #api: https://api.au-syd.cf.cloud.ibm.com
     space: cheuk.sydney
     manifest: manifest.yml
     #username: thomas.cheuk@hk1.ibm.com
