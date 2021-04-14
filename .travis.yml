@@ -23,6 +23,7 @@ deploy:
   - edge: true
     provider: bluemixcloudfoundry
     username: apikey
+    password: 5l3MxD2nKmP7WxGzu-Vn6D2fVHx2de9lV5fetJkqpzeh
     apikey:
       secret: 5l3MxD2nKmP7WxGzu-Vn6D2fVHx2de9lV5fetJkqpzeh
     #username: thomas.cheuk@hk1.ibm.com
@@ -30,7 +31,6 @@ deploy:
     ## Add BLUEMIX_PASSWORD environment variable to your Travis project's settings
     ## https://docs.travis-ci.com/user/environment-variables/#Defining-Variables-in-Repository-Settings
     #########################
-    #password: 5l3MxD2nKmP7WxGzu-Vn6D2fVHx2de9lV5fetJkqpzeh
     organization: owenchen@tw.ibm.com
     space: cheuk.sydney
     manifest: manifest.yml
