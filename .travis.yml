@@ -24,7 +24,7 @@ deploy:
     provider: bluemixcloudfoundry
     username: apikey
     password: 9NK0YAy7qGAYZBznkg1zrqlHS5XTU7u8nTv-rE5fRqS-
-    organization: owenchen@tw.ibm.com
+    organizatvion: owenchen@tw.ibm.com
     region: au-syd
     app_name: sample-app
     api: https://api.au-syd.cf.cloud.ibm.com
