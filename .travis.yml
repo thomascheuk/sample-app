@@ -25,6 +25,9 @@ deploy:
     username: apikey
     password: 9NK0YAy7qGAYZBznkg1zrqlHS5XTU7u8nTv-rE5fRqS-
     organization: owenchen@tw.ibm.com
+    region: au-syd
+    app_name: sample-app
+    api: https://api.au-syd.cf.cloud.ibm.com
     space: cheuk.sydney
     manifest: manifest.yml
     #username: thomas.cheuk@hk1.ibm.com
@@ -32,8 +35,5 @@ deploy:
     ## Add BLUEMIX_PASSWORD environment variable to your Travis project's settings
     ## https://docs.travis-ci.com/user/environment-variables/#Defining-Variables-in-Repository-Settings
     #########################
-    
-    #region: au-syd
-    #api: https://api.au-syd.cf.cloud.ibm.com
     on: 
       all_branches: true
