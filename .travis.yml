@@ -23,7 +23,8 @@ deploy:
   - edge: true
     provider: bluemixcloudfoundry
     username: apikey
-    password: 9NK0YAy7qGAYZBznkg1zrqlHS5XTU7u8nTv-rE5fRqS-
+    password: $APIKEY
+    #password: 9NK0YAy7qGAYZBznkg1zrqlHS5XTU7u8nTv-rE5fRqS-
     organizatvion: owenchen@tw.ibm.com
     region: au-syd
     app_name: sample-app
