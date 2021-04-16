@@ -38,4 +38,4 @@ deploy:
     #########################
     #api: https://api.au-syd.cf.cloud.ibm.com
     on: 
-      all_branches: false
+      all_branches: true
