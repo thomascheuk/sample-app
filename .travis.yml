@@ -40,5 +40,6 @@ deploy:
     ## https://docs.travis-ci.com/user/environment-variables/#Defining-Variables-in-Repository-Settings
     #########################
     #api: https://api.au-syd.cf.cloud.ibm.com
+    skip_cleanup: true
     on: 
       all_branches: true
