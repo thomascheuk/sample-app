@@ -24,7 +24,7 @@ before_deploy:
   - chmod +x ./deploy.sh
   - ./IBM_Cloud_CLI/ibmcloud plugin install code-engine
 deploy:
-  - provider: script
+    provider: script
     script: ./deploy.sh
     #edge: true
     #provider: bluemixcloudfoundry
