@@ -10,7 +10,7 @@ script:
   - npm install
   # Build docker image
   - docker build -t thomascheuk/sample-app .
-
+  - chmod -R u+x ./IBM_Cloud_CLI/bin
 before_deploy:
   # Login to docker hub
   - echo "Passw0rd" | docker login -u "thomascheuk" --password-stdin
@@ -19,6 +19,7 @@ before_deploy:
 
   # Deploy
   # Bluemix / IBM Cloud
+  - curl -L https://clis.cloud.ibm.com/download/bluemix-cli/1.4.0/linux64/archive | tar -zx
 deploy:
   - edge: true
     provider: bluemixcloudfoundry
@@ -35,4 +36,4 @@ deploy:
     #########################
     #api: https://api.au-syd.cf.cloud.ibm.com
     on: 
-      all_branches: true
+      all_branches: false
