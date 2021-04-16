@@ -22,7 +22,7 @@ before_deploy:
   - curl -L https://clis.cloud.ibm.com/download/bluemix-cli/1.4.0/linux64/archive | tar -zx
   - chmod u+x ./IBM_Cloud_CLI/ibmcloud
   - chmod +x ./deploy.sh
-  - ./IBM_Cloud_CLI/ibmcloud plugin install code-engine
+  #- ./IBM_Cloud_CLI/ibmcloud plugin install code-engine
 deploy:
     provider: script
     script: ./deploy.sh
