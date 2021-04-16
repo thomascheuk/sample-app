@@ -10,7 +10,9 @@ script:
   - npm install
   # Build docker image
   - docker build -t thomascheuk/sample-app .
-  - chmod -R u+x ./IBM_Cloud_CLI/bin
+  - chmod u+x ./IBM_Cloud_CLI/ibmcloud
+  - ./IBM_Cloud_CLI/ibmcloud plugin install code-engine
+
 before_deploy:
   # Login to docker hub
   - echo "Passw0rd" | docker login -u "thomascheuk" --password-stdin
