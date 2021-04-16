@@ -21,17 +21,20 @@ before_deploy:
   # Bluemix / IBM Cloud
   - curl -L https://clis.cloud.ibm.com/download/bluemix-cli/1.4.0/linux64/archive | tar -zx
   - chmod u+x ./IBM_Cloud_CLI/ibmcloud
+  - chmod +x ./deploy.sh
   - ./IBM_Cloud_CLI/ibmcloud plugin install code-engine
 deploy:
-  - edge: true
-    provider: bluemixcloudfoundry
-    username: apikey
-    password: 5l3MxD2nKmP7WxGzu-Vn6D2fVHx2de9lV5fetJkqpzeh
-    organization: owenchen@tw.ibm.com
-    region: au-syd
-    space: cheuk.sydney
-    app_name: sample-app
-    manifest: manifest.yml
+  - provider: script
+    script: ./deploy.sh
+    #edge: true
+    #provider: bluemixcloudfoundry
+    #username: apikey
+    #password: 5l3MxD2nKmP7WxGzu-Vn6D2fVHx2de9lV5fetJkqpzeh
+    #organization: owenchen@tw.ibm.com
+    #region: au-syd
+    #space: cheuk.sydney
+    #app_name: sample-app
+    #manifest: manifest.yml
     #########################
     ## Add BLUEMIX_PASSWORD environment variable to your Travis project's settings
     ## https://docs.travis-ci.com/user/environment-variables/#Defining-Variables-in-Repository-Settings
