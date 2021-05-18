@@ -1,9 +1,25 @@
 // Require the framework and instantiate it
 const fastify = require('fastify')({ logger: true })
+var mysql = require('mysql'); 
+
+var con = mysql.createConnection({
+  host: process.env.MYSQL_HOST,
+  user: "thomas",
+  password: "password"
+});
+var db_status = "disconnected"
+con.connect(function(err) {
+  if (err) {
+    // throw err;
+    db_status = "disconnected"
+  } else {
+    db_status = "connected"
+  }
+});
 
 // Declare a route
 fastify.get('/', async (request, reply) => {
-  return { hello: 'IBM Cloud World' }
+  return { hello: 'IBM Cloud World ' + db_status}
 })
 
 // Run the server!
